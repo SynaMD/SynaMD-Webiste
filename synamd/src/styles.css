@@ -280,11 +280,33 @@ h2.center {
 }
 
 /* ---------- Mobile ---------- */
-@media (max-width: 600px) {
-  .pillar {
-    flex-wrap: wrap;
+/* ---------- Navbar on phones ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 16px;
+    gap: 16px; /* Contact and EN never touch */
   }
-  .tagline {
-    font-size: 17px;
+
+  .links {
+    gap: 18px;
+  }
+
+  .links .logo-btn {
+    position: static;
+    transform: none;
+  }
+
+  .navbar .logo {
+    height: 30px;
+    width: auto;
+  }
+
+  .navbar button,
+  .lang {
+    font-size: 14px;
+  }
+
+  .lang {
+    gap: 4px;
   }
 }

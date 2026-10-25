@@ -281,9 +281,29 @@ h2.center {
 
 /* ---------- Mobile ---------- */
 @media (max-width: 600px) {
+  /* icon + name on top, text full width below */
   .pillar {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px 12px;
+    padding: 14px 16px;
   }
+
+  .pillar-name {
+    min-width: 0;
+  }
+
+  .pillar-text {
+    grid-column: 1 / -1;
+    line-height: 1.6;
+  }
+
+  /* a bit less side space on phones */
+  .section {
+    padding: 24px 16px;
+  }
+
   .tagline {
     font-size: 17px;
   }
